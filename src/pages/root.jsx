@@ -1,5 +1,7 @@
-const Root = () => {
-  return <div>Home</div>
-}
+import { Outlet } from "react-router-dom";
 
-export default Root
+const Root = () => {
+  return <Outlet />;
+};
+
+export default Root;

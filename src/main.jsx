@@ -2,9 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
+  redirect,
   RouterProvider,
 } from "react-router-dom";
-import {Enroll, Root} from "./pages";
+import { Enroll, Root, Schedule } from "./pages";
+import RedirectToEnroll from "./components/EnrollLink";
 
 import "./index.css";
 
@@ -12,10 +14,20 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-  },
-  {
-    path: "/enroll",
-    element: <Enroll />,
+    children: [
+      {
+        path: "/enroll",
+        element: <Enroll />,
+      },
+      {
+        path: "/schedule",
+        element: <Schedule />,
+      },
+      {
+        path: "",
+        element: <RedirectToEnroll />,
+      },
+    ],
   },
 ]);
 

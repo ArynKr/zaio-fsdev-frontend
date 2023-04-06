@@ -1,25 +1,13 @@
 import { useEffect, useState } from "react";
+import Calendar from "../components/Calendar";
 
 const Schedule = () => {
-  const [courseStructure, setCourseStructure] = useState(null);
-  useEffect(() => {
-    const hoursPerDay = localStorage.getItem("hoursPerDay");
-    const fetchCourseStructure = async () => {
-      const data = await fetch(
-        `${
-          import.meta.env.VITE_BASE_URL
-        }/courseStructures?hoursPerDay=${hoursPerDay}`
-      );
-      console.log(data);
-    };
-    if (!hoursPerDay) {
-      navigate("/enroll");
-    } else {
-      fetchCourseStructure();
-    }
-  });
 
-  return null;
+  return (
+    <div className="w-full max-w-md mx-auto border px-4 py-8 rounded-xl mt-24">
+      <Calendar />
+    </div>
+  );
 };
 
 export default Schedule;

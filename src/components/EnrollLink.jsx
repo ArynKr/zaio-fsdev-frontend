@@ -3,17 +3,14 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const RedirectToEnroll = () => {
   const navigate = useNavigate();
-  useEffect(() => {
-    navigate("/enroll");
-  });
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 w-full flex justify-center">
       <Link
         to="/enroll"
-        className="text-white focus:ring-4 focus:outline-none bg-gradient-to-r from-blue-500 to-blue-600 font-medium rounded-lg text-sm w-full px-5 py-3.5 mt-1 mb-4 text-center dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all hover:shadow-lg"
+        className="text-white mx-auto focus:ring-4 w-44 focus:outline-none bg-gradient-to-r from-blue-500 to-blue-600 font-medium rounded-lg text-sm  px-5 py-3.5 text-center dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all hover:shadow-lg"
       >
-        Redirecting to enroll...
+        Go to Enroll
       </Link>
     </div>
   );

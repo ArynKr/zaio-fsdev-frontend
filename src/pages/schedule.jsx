@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import Calendar from "../components/Calendar";
+import Calendar from "../components/calendar/Calendar";
 
 const Schedule = () => {
 
   return (
-    <div className="w-full max-w-md mx-auto border px-4 py-8 rounded-xl mt-24">
+    <div className="w-[90%] max-w-7xl mx-auto ">
       <Calendar />
     </div>
   );

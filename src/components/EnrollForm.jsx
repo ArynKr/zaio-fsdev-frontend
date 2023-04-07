@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Select from "./Select";
-import { courseOptions, hoursPerDayOptions } from "../../constants";
+import { courseOptions, hoursPerDayOptions } from "../constants";
 
 const EnrollForm = () => {
   const navigate = useNavigate();

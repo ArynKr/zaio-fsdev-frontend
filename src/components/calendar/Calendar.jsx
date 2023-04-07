@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import format from "../utils/format";
+import CalendarContextWrapper from "../../context/CalendarContextWrapper";
+import format from "../../utils/format";
+import CalendarHeader from "./CalendarHeader";
+import Month from "./Month";
 
 const Calendar = () => {
   const navigate = useNavigate();
   const [courseStructure, setCourseStructure] = useState(null);
-
-  useEffect(() => {
-    console.log(courseStructure)
-  }, [courseStructure]);
 
   useEffect(() => {
     let isMounted = true;
@@ -35,7 +34,12 @@ const Calendar = () => {
   }, []);
 
   return (
-    <div>Hello</div>
+    <CalendarContextWrapper>
+      <div>
+        <CalendarHeader />
+        <Month />
+      </div>
+    </CalendarContextWrapper>
   );
 }
 

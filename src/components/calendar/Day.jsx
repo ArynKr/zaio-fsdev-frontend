@@ -24,7 +24,7 @@ const Day = ({ day, showWeekday, course, dayStructure }) => {
 
   /* styling for other month dates */
   const getCurrentMonthClass = () => {
-    return day.month() === monthIndex ? '' : 'opacity-50'
+    return day.month() === (monthIndex % 12)  ? '' : 'opacity-50'
   }
 
   /* styling for weekends */

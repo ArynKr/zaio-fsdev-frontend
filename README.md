@@ -7,6 +7,7 @@
 - [x] Add a form in enroll page
 - [x] Redirect to `/enroll` from `/`
 - [x] Add schedule route
-- [ ] Add calendar in schedule page
-- [ ] Handle react memory leaks
+- [x] Add calendar in schedule page
+- [x] Handle react memory leaks
+- [x] Stop scrolling when modal is open
 - [ ] Add different views for calendar

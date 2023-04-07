@@ -6,6 +6,7 @@ const CalendarContextWrapper = ({ children }) => {
   const [monthIndex, setMonthIndex] = useState(dayjs().month())
   const [year, setYear] = useState(dayjs().year())
   const [showEventsModal, setShowEventsModal] = useState(false)
+  const [modalTasks, setModalTasks] = useState([])
 
   return (
     <CalendarContext.Provider
@@ -16,6 +17,8 @@ const CalendarContextWrapper = ({ children }) => {
         setYear,
         showEventsModal,
         setShowEventsModal,
+        modalTasks,
+        setModalTasks,
       }}
     >
       {children}

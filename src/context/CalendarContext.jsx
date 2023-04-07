@@ -7,6 +7,8 @@ const CalendarContext = createContext({
   setYear: () => {},
   showEventsModal: false,
   setShowEventsModal: () => {},
+  modalTasks: [],
+  setModalTasks: () => {},
 });
 
 export default CalendarContext;
